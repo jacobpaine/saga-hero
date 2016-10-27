@@ -13,6 +13,11 @@ var config = require('./config/environment');
 // Setup server
 var app = express();
 app.use(ExpressStormpath.init(app,{
+  application:{
+      href: 'https://api.stormpath.com/v1/applications/3hSEAQDOSaMkcTs2cCwNnD'
+    },
+    website: true
+  },
   web: {
     spa: {
       enabled: true,
