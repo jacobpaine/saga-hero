@@ -17,12 +17,12 @@ app.use(ExpressStormpath.init(app,{
       href: 'https://api.stormpath.com/v1/applications/3hSEAQDOSaMkcTs2cCwNnD'
   },
   website: true
-  // web: {
-  //   spa: {
-  //     enabled: true,
-  //     view: path.join(__dirname, '..','client','index.html')
-  //   }
-  // }
+  web: {
+    spa: {
+      enabled: true,
+      view: path.join(__dirname, '..','client','index.html')
+    }
+  }
 }));
 var server = require('http').createServer(app);
 require('./config/express')(app);
